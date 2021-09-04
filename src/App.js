@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Reset } from 'styled-reset';
+// import styled, { createGlobalStyle } from 'styled-components';
+import Header from "./Header";
+import QuestionPage from './QuestionPage';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AskPage from './AskPage';
+import Styles from './Styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Reset />
+        <Styles />
+
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/ask" component={AskPage}></Route>
+            <Route path="/" component={QuestionPage}></Route>
+
+          </Switch>
+        </Router>
+
+      </div>
+    </>
   );
+
 }
 
 export default App;

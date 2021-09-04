@@ -1,0 +1,20 @@
+import React from 'react'
+import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+const BlueButtonLink = styled(Link)`
+background-color:#378ad3;
+text-decoration:none;
+color:#fff;
+border:0;
+border-radius:5px;
+padding: 12px 10px;
+`;
+// function BlueButtonLink() {
+//     return (
+//         <div>
+            
+//         </div>
+//     )
+// }
+
+export default BlueButtonLink;
